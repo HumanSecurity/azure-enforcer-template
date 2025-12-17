@@ -6,7 +6,7 @@
     "build:functionapp": "npm run functionapp:compile && npm run functionapp:zip",
     "build:frontdoor": "npx perimeterx-azure-js-sdk -e src/enforcerConfig.json",
     "functionapp:compile": "rollup -c rollup.config.js --bundleConfigAsCjs",
-    "functionapp:zip": "zip -r EnforcerFunction.zip . -x@.funcignore"
+    "functionapp:zip": "zip -qr EnforcerFunction.zip EnforcerFunction host.json"
   },
   "dependencies": {
     "perimeterx-azure-js-sdk": "^1.2.0"
